@@ -8,7 +8,7 @@ class Solution(object):
             rev_x += x % 10  # This adds the remainder of x%10 to rev_x, which is essentially just to add the right most digit of x to rev_x
             x = x // 10  # This divides x by 10 and returns the quotient, which is essentially removing the right most digit from x
 
-        if x == rev_x or x == rev_x // 10:  # Since x and rev_x are supposedly the same, the number is hence a palindrome. If the number is odd-numbered, this would mean that rev_x has 1 more digit than x. The 2nd condition helps by removing the 'middle' number, essentially making x and rev_x the same AGAIN, if the number is a palindrome
+        if x == rev_x or x == rev_x // 10:  # If the number is a palindrome, x and rev_x are would be the same. If the number is odd-numbered, this would mean that rev_x has 1 more digit than x. The 2nd condition helps by removing the 'middle' number, essentially making x and rev_x the same AGAIN, if the number is a palindrome
             return True
         else:
             return False
