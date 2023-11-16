@@ -52,7 +52,7 @@ class Solution:
         # Improved Approach
         # 1) Initialize dictionary to store each iteration of s as its key and the index as its value
         # 2) Initialize output to store size of partitions and a counter to store the value of the last index of the particular iteration
-        # 3) Loop through s. counter =  dictionary[i]. if counter == i, output.append(i+1-sum(output)). -> O(n)
+        # 3) Loop through s. counter =  max(dictionary[i],counter). if counter == i, output.append(i+1-sum(output)). -> O(n)
         # 4) Return output
         
         dictionary_last_index: dict[str,int] = {}
